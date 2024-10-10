@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """ Complex types of annotations"""
+from typing import List
 
 
-def sum_list(input_list: list[float]) -> float:
+def sum_list(input_list: List[float]) -> float:
     """ sum list """
-    return float(sum(input_list))
+    return sum(input_list)
