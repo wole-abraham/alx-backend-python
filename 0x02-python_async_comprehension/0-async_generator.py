@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-""" Python script using async functions"""
-import random
+"""Write a coroutine called async_generator that takes no arguments.
+then yield a random number between 0 and 10. Use the random module.
+"""
+
+
 import asyncio
+import random
+from typing import Generator
 
 
-async def async_generator():
-    """
-    Coroutine that loops 10 times, each time asynchronously waits for 1 second,
-    then yields a random number between 0 and 10.
-    """
-    for _ in range(10):
-        await asyncio.sleep(1)  # Asynchronously wait for 1 second
-        yield random.uniform(0, 10)  # Yield a random float between 0
+async def async_generator() -> Generator[float, None, None]:
+    """Loop 10 times, wait 1 sec each time"""
+    for i in range(10):
+        await asyncio.sleep(1)
+        yield random.random() * 10
