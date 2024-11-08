@@ -3,7 +3,7 @@
 import unittest
 from parameterized import parameterized, parameterized_class
 import utils
-from typing import Mapping, List, Union
+from typing import Mapping, List, Union, Sequence
 
 
 class TestAccessNestedMap(unittest.TestCase):
